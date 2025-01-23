@@ -23,9 +23,12 @@ JAVA, HTML, CSS, JAVASCRIPT.
                     ◦ Crear Facturas de comida/cena.	
 
 CONTEXTUALIZACIÓN
-Se pretende crear una aplicación con dos tipos de actores o usuarios, administradores de la sociedad y los socios.
+Se pretende crear una aplicación, en la que los usuarios pueden tener dos roles, administradores de la sociedad y los socios.
 ¿Qué podrá hacer cada uno?
 
 Los administradores son los que en realidad gestionan la sociedad, pudiendo dar de alta, bajas, modificar datos de los socios y controlar los productos en stock y realización de pedidos.
 
-Los socios por su parte, sólo podrán realizar reservas y creación de las facturas de las comidas y cenas que hagan en la sociedad, añadiendo los productos y servicios consumidos en ellas.
+Los socios por su parte, pueden realizar reservas y creación de las facturas de las comidas y cenas que hagan en la sociedad, añadiendo los productos y servicios consumidos en ellas.
+
+Se organiza, en un principio con 8 tablas, dando pOr hecho que este número variará una vez se construya el modelo Entidad-Relación E/R y la transformación al modelo relacional, las tablas son:
+USUARIOS, ROLES, SOCIOS, ADMINISTRADORES, RESERVAS, FACTURAS, GRUPOS, PRODUCTOS.
