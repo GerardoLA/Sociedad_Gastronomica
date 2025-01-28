@@ -32,3 +32,11 @@ Los socios por su parte, pueden realizar reservas y creación de las facturas de
 
 Se organiza, en un principio con 8 tablas, dando pOr hecho que este número variará una vez se construya el modelo Entidad-Relación E/R y la transformación al modelo relacional, las tablas son:
 USUARIOS, ROLES, SOCIOS, ADMINISTRADORES, RESERVAS, FACTURAS, GRUPOS, PRODUCTOS.
+
+SE ELIMINA SOCIOS Y SE AÑADE DETALLE_FACTURA, QUEDANDO:
+USUARIOS, ROLES, RESERVAS, RESERVAS, FACTURAS, DETALLES_FACTURA, GRUPOS Y PRODUCTOS.
+
+Se crea la base de datos en PHPMYADMIN, primary keys, relaciones y foreign keys con sentecias SQL.
+En un principio la parte de BBDD acabada.
+
+Comienza parte programación, en jaca con eclipse IDE.
