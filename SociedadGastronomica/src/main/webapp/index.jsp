@@ -8,6 +8,6 @@
 </head>
 <body>
 <h1>Hola soy la vista de prueba2</h1>
-<h2>segundomas</h2>
+<h2>segundomas2</h2>
 </body>
 </html>
