@@ -1,0 +1,7 @@
+# Archivos y carpetas de Eclipse
+/.settings/
+/bin/
+/build/
+/target/
+/.classpath
+/.project
