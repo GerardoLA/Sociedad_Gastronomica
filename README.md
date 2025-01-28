@@ -39,4 +39,4 @@ USUARIOS, ROLES, RESERVAS, RESERVAS, FACTURAS, DETALLES_FACTURA, GRUPOS Y PRODUC
 Se crea la base de datos en PHPMYADMIN, primary keys, relaciones y foreign keys con sentecias SQL.
 En un principio la parte de BBDD acabada.
 
-Comienza parte programación, en jaca con eclipse IDE.
+Comienza parte programación, en java con eclipse IDE.
