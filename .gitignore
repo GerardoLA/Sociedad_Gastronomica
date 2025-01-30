@@ -5,3 +5,13 @@
 /target/
 /.classpath
 /.project
+.DS_Store
+Thumbs.db
+
+# Archivos de dependencias
+.m2/
+node_modules/
+.gradle/
+
+# Archivos de configuración de versiones
+.gitmodules
