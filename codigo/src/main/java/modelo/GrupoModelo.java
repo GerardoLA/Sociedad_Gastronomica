@@ -4,9 +4,9 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 public class GrupoModelo extends Conector{
-	
+	PreparedStatement pst;
 	public boolean crearGrupo(Grupo grupo) {
-		PreparedStatement pst;
+		
 		
 		try {
 			pst = getConexion().prepareStatement("INSERT INTO  grupos(id,nombre)VALUES(?,?)");
@@ -20,6 +20,23 @@ public class GrupoModelo extends Conector{
 			e.printStackTrace();
 			return true;
 		}
+		
+	}
+	
+	public boolean eliminarGrupo(int id) {
+		try {
+			pst = getConexion().prepareStatement("Delete from grupos where id = ?");
+			pst.setInt(1, id);
+			
+			pst.execute();
+			getConexion().close();
+			return true;
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return false;
 		
 	}
 
