@@ -43,7 +43,7 @@ public class AltaGrupo extends HttpServlet {
 		GrupoModelo modGrupo = new GrupoModelo();
 		Grupo grupo = new Grupo();
 		grupo.setId((Integer.parseInt(request.getParameter("id"))));
-		grupo.setNombre(request.getParameter("noimbre"));
+		grupo.setNombre(request.getParameter("nombre"));
 		modGrupo.crearGrupo(grupo);
 		request.getRequestDispatcher("VerGrupos").forward(request, response);
 	}
