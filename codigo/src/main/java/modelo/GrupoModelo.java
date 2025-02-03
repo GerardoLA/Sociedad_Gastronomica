@@ -39,5 +39,24 @@ public class GrupoModelo extends Conector{
 		return false;
 		
 	}
+	
+	public boolean modificarGrupo(Grupo grupo) {
+		
+		try {
+			pst = getConexion().prepareStatement("UPDATE grupos SET nombre=? WHERE id=?");
+			pst.setString(1, grupo.getNombre());
+			
+			pst.execute();
+			getConexion().close();
+			return true;
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return false;
+		}
+		
+		
+		
+	}
 
 }
