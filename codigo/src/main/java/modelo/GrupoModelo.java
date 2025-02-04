@@ -1,6 +1,7 @@
 package modelo;
 
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class GrupoModelo extends Conector{
@@ -56,6 +57,26 @@ public class GrupoModelo extends Conector{
 		}
 		
 		
+		
+	}
+	
+	public Grupo getGrupo(int id) {
+		Grupo grupo = new Grupo();
+		
+		try {
+			pst = getConexion().prepareStatement("Select * from grupos where id=?");
+			pst.setInt(1, id);
+			ResultSet resultado = pst.executeQuery();
+			resultado.next();
+			grupo.setId(resultado.getInt("id"));
+			grupo.setNombre(resultado.getString("nombre"));
+			getConexion().close();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return grupo;
 		
 	}
 
