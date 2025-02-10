@@ -6,8 +6,10 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import modelo.LoginModelo;
+import modelo.Usuario;
 
 /**
  * Servlet implementation class Inicio
@@ -40,6 +42,12 @@ public class Inicio extends HttpServlet {
 		String password = request.getParameter("password");
 		
 		LoginModelo lm = new LoginModelo();
+		Usuario usuario = lm.getPassword(password);
+		HttpSession session = request.getSession();
+		
+		if(password.equals(usuario.getPassword())) {
+			response.sendRedirect("UsuarioFactura.jsp");
+		}
 	}
 
 }

@@ -28,4 +28,6 @@ public class LoginModelo extends Conector{
 		return usuario;
 		
 	}
+	
+	
 }
