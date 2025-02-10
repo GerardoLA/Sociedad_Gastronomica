@@ -7,6 +7,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import modelo.LoginModelo;
+
 /**
  * Servlet implementation class Inicio
  */
@@ -36,6 +38,8 @@ public class Inicio extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		int id = Integer.parseInt(request.getParameter("id"));
 		String password = request.getParameter("password");
+		
+		LoginModelo lm = new LoginModelo();
 	}
 
 }
