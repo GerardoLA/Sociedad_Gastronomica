@@ -42,11 +42,15 @@ public class Inicio extends HttpServlet {
 		String password = request.getParameter("password");
 		
 		LoginModelo lm = new LoginModelo();
-		Usuario usuario = lm.getPassword(password);
+		Usuario usuario = lm.getUsuarioPorId(id);
 		HttpSession session = request.getSession();
 		
-		if(password.equals(usuario.getPassword())) {
-			response.sendRedirect("UsuarioFactura.jsp");
+		if (usuario != null && password.equals(usuario.getPassword())) {
+		    session.setAttribute("usuario", usuario);
+		    response.sendRedirect("UsuarioFactura.jsp");
+		} else {
+		    request.setAttribute("error", "Usuario o contraseña incorrectos");
+		    request.getRequestDispatcher("Login.jsp").forward(request, response);
 		}
 	}
 

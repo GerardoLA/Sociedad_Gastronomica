@@ -7,13 +7,13 @@
     <link rel="stylesheet" href="styles/Login.css">
 </head>
 <body>
-    <form class="form">
+    <form class="form" method="post" action="Inicio">
         <h2 class="form_title">Inicia Sesión</h2>
         <p class="form_paragraph">¿Aún no tienes cuenta?<a href="#" class="form_link">Entra aquí</a></p>
 
         <div class="form_container">
             <div class="form_group">
-                <input type="text" name="id" id="id" class="form_input" placeholder=" ">
+                <input type="number" name="id" id="id" class="form_input" placeholder=" ">
                 <label for="id" class="form_label">Id</label>
                 <span class="form_line"></span>
             </div>
