@@ -8,6 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>Hola ${usuario.nombre }!!Ya estás en la página de la factura!</h1>
+<h1>Hola ${usuario.nombre} ${usuario.apellidos}!! --------->
+Ya estás en la página de la factura!</h1>
 </body>
 </html>

@@ -47,7 +47,7 @@ public class Inicio extends HttpServlet {
 		
 		if (usuario != null && password.equals(usuario.getPassword())) {
 		    session.setAttribute("usuario", usuario);
-		    response.sendRedirect("UsuarioFactura.jsp");
+		    response.sendRedirect("SocioFactura.jsp");
 		} else {
 		    request.setAttribute("error", "Usuario o contraseña incorrectos");
 		    request.getRequestDispatcher("Login.jsp").forward(request, response);
